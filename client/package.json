@@ -2,9 +2,9 @@
   "name": "client",
   "version": "1.0.0",
   "description": "contact-card",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,14 @@
   "bugs": {
     "url": "https://github.com/AlexandertheGreat491/Contact-card/issues"
   },
-  "homepage": "https://github.com/AlexandertheGreat491/Contact-card#readme"
+  "homepage": "https://github.com/AlexandertheGreat491/Contact-card#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "build": "^0.1.4",
+    "npm": "^8.18.0",
+    "run": "^1.4.0"
+  }
 }
