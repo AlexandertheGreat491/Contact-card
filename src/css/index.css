@@ -1,0 +1,6 @@
+/*connects this stylesheet to the
+card, form, and header stylesheets*/
+
+@import "./card.css";
+@import "./form.css";
+@import "./header.css";
