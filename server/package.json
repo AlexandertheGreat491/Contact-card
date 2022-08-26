@@ -2,9 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "contact-card",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/AlexandertheGreat491/Contact-card/issues"
   },
-  "homepage": "https://github.com/AlexandertheGreat491/Contact-card#readme"
+  "homepage": "https://github.com/AlexandertheGreat491/Contact-card#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
