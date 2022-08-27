@@ -37,6 +37,10 @@ Collaborators:
 
 Sources:
 
+[Asset Management](https://webpack.js.org/guides/asset-management/#loading-css)
+
+[babel-loader](https://www.npmjs.com/package/babel-loader)
+
 [Concurrently](https://www.npmjs.com/package/concurrently)
 
 [Nodemon](https://www.npmjs.com/package/nodemon)
