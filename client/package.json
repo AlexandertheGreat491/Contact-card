@@ -4,7 +4,9 @@
   "description": "contact-card",
   "private": "true",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --mode development",
+    "dev": "webpack-dev-server",
+    "start": "webpack --watch"
   },
   "repository": {
     "type": "git",
