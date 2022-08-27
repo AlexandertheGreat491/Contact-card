@@ -2,6 +2,9 @@
 import "./form";
 import "./submit";
 
+// import css files
+import "../css/index.css";
+
 /*allows the images to be included in the dependency graph*/
 
 import Logo from "../images/logo.png";

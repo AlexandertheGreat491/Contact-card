@@ -37,9 +37,15 @@ Collaborators:
 
 Sources:
 
+[Concurrently](https://www.npmjs.com/package/concurrently)
+
 [Nodemon](https://www.npmjs.com/package/nodemon)
 
+[Professional Readme Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+
 [Webpack](https://webpack.js.org/guides/getting-started/#modules)
+
+[Working with objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 
 ## License
 
