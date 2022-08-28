@@ -55,6 +55,8 @@ Sources:
 
 [Professional Readme Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
+[Scripts](https://docs.npmjs.com/cli/v8/using-npm/scripts)
+
 [Webpack](https://webpack.js.org/guides/getting-started/#modules)
 
 [Working with objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
