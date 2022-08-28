@@ -4,6 +4,7 @@ import "./submit";
 
 // import css files
 import "../css/index.css";
+import "../css/custom.css";
 
 /*allows the images to be included in the dependency graph*/
 
@@ -18,3 +19,7 @@ window.addEventListener("load", function () {
   document.getElementById("bearThumbnail").src = Bear;
   document.getElementById("dogThumbnail").src = Dog;
 });
+
+// import Bootstrap's npm modules
+import { Tooltip, Toast, Popover } from 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
