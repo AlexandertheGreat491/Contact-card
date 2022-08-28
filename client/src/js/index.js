@@ -4,6 +4,7 @@ import "./submit";
 
 // import css files
 import "../css/index.css";
+// my custom css
 import "../css/custom.css";
 
 /*allows the images to be included in the dependency graph*/
