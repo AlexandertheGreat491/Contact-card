@@ -43,7 +43,15 @@ Sources:
 
 [Concurrently](https://www.npmjs.com/package/concurrently)
 
+[CSS #id Selector](https://www.w3schools.com/cssref/sel_id.asp)
+
+[CSS Borders](https://www.w3schools.com/css/css_border.asp)
+
+[HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp)
+
 [Nodemon](https://www.npmjs.com/package/nodemon)
+
+[Pixel to Em Conversion](https://www.w3schools.com/tags/ref_pxtoemconversion.asp)
 
 [Professional Readme Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
