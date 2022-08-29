@@ -15,12 +15,19 @@ import Dog from "../images/dog.png";
 
 // uses DOM manipulation to insert the images
 // add images on load
-window.addEventListener("load", function () {
-  document.getElementById("logo").src = Logo;
-  document.getElementById("bearThumbnail").src = Bear;
-  document.getElementById("dogThumbnail").src = Dog;
+// imports the initDb function from database.js
+import { initdb } from './database';
+
+window.addEventListener('load', function() {
+  initdb();
+  document.getElementById('logo').src = Logo;
+  document.getElementById('bearThumbnail').src = Bear;
+  document.getElementById('dogThumbnail').src = Dog;
 });
 
 // import Bootstrap's npm modules
-import { Tooltip, Toast, Popover } from 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Tooltip, Toast, Popover } from "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+
+

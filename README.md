@@ -49,6 +49,8 @@ Sources:
 
 [HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp)
 
+[idb](https://www.npmjs.com/package/idb)
+
 [Nodemon](https://www.npmjs.com/package/nodemon)
 
 [Pixel to Em Conversion](https://www.w3schools.com/tags/ref_pxtoemconversion.asp)
