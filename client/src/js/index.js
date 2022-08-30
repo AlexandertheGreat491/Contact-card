@@ -16,10 +16,16 @@ import Dog from "../images/dog.png";
 // uses DOM manipulation to insert the images
 // add images on load
 // imports the initDb function from database.js
-import { initdb } from './database';
+import { getDb, initdb, postDb } from './database';
 
 window.addEventListener('load', function() {
   initdb();
+
+  // temporarily placing the getDb() & postDb() function calls for the test data
+  getDb();
+  postDb("Lernantino", "learnantino@test.com", 8186601234, "Bear");
+  getDb();
+  
   document.getElementById('logo').src = Logo;
   document.getElementById('bearThumbnail').src = Bear;
   document.getElementById('dogThumbnail').src = Dog;
