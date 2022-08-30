@@ -18,7 +18,7 @@ export const initdb = async () => {
   });
 };
 
-// exports a function that is used to GET to the database
+// exports a function that is used retrieve or READ data from the IndexedDB database
 // export async getDb()
 export const getDb = async () => {
   console.log("GET from the database");
