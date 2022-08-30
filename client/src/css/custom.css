@@ -1,9 +1,0 @@
-/*universal styling*/
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/*card styling*/
-#card {
-   border: 0.125em groove #000000
-}
