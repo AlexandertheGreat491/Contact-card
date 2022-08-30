@@ -43,22 +43,70 @@ export const getDb = async () => {
 
 // export the postDb() function to POST to the database
 export const postDb = async (name, email, phone, profile) => {
-    console.log ('POST to the database');
+  console.log("POST to the database");
 
-    // creates a connection to the database & specifies the version
-    const contactDb = await openDB('contact_db', 1);
+  // creates a connection to the database & specifies the version
+  const contactDb = await openDB("contact_db", 1);
 
-    // creates a new transaction & specifies the store & data privileges
-    const tx = contactDb.transaction('contacts', 'readwrite');
+  // creates a new transaction & specifies the store & data privileges
+  const tx = contactDb.transaction("contacts", "readwrite");
 
-    // opens up the desired object store
-    const store = tx.objectStore('contacts');
+  // opens up the desired object store
+  const store = tx.objectStore("contacts");
 
-    // uses the .add() method on the store & passes  in the content
-    // the .add() method takes in an object as a parameter that is populated by a form input
-    const request = store.add({name: name, email: email, phone: phone, profile: profile});
+  // uses the .add() method on the store & passes  in the content
+  // the .add() method takes in an object as a parameter that is populated by a form input
+  const request = store.add({
+    name: name,
+    email: email,
+    phone: phone,
+    profile: profile,
+  });
 
-    // gets confirmation of the request
-    const result = await request;
-    console.log('🚀 - data saved to the database', result);
-}
+  // gets confirmation of the request
+  const result = await request;
+  console.log("🚀 - data saved to the database", result);
+};
+
+// exports the deleteDb function
+export const deleteDb = async (id) => {
+  console.log("DELETE from the database", id);
+
+  // creates the connection to the IndexedDB database & the version
+  const contactDb = await openDB("contact_db", 1);
+
+  // creates new transaction & specifies the store & data privileges
+  const tx = contactDb.transaction("contacts", "readwrite");
+
+  // opens the desired object store
+  const store = tx.objectStore("contacts");
+
+  // uses the .delete() method to get all data in the database
+  const request = store.delete(id);
+
+  // gets the confirmation of the request
+  const result = await request;
+  console.log("result.value", result);
+  return result?.value;
+};
+
+// editDb async function exported
+export const editDb = async (id, name, email, phone, profile) => {
+  console.log("PUT to the database");
+
+  const contactDb = await openDB("contact_db", 1);
+
+  const tx = contactDb.transaction("contacts", "readwrite");
+
+  const store = tx.objectStore("contacts");
+
+  const request = store.put({
+    id: id,
+    name: name,
+    email: email,
+    phone: phone,
+    profile: profile,
+  });
+  const result = await request;
+  console.log("🚀 - data saved to the database", result);
+};
