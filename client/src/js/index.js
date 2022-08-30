@@ -20,7 +20,7 @@ import Dog from "../images/dog.png";
 // uses DOM manipulation to insert the images
 // add images on load
 // imports the initDb function from database.js
-import { getDb, initdb, postDb, deleteDb } from "./database";
+import { getDb, initdb, postDb, deleteDb, editDb } from "./database";
 
 // imports the fetchCards() function
 import { fetchCards } from "./cards";
@@ -82,4 +82,23 @@ window.deleteCard = (e) => {
   deleteDb(id);
   // Reloads the DOM
   fetchCards();
+};
+
+window.editCard = (e) => {
+  // grabs the id from the button element attached ot the contact card & sets a global variable that will be used in the form element
+  profileId = parseInt(e.dataset.id);
+
+  // grabs information to pre-populate edit form
+  let editName = e.dataset.name;
+  let editEmail = e.dataset.email;
+  let editPhone = e.dataset.phone;
+
+  document.getElementById("name").value = editName;
+  document.getElementById("email").value = editEmail;
+  document.getElementById("phone").value = editPhone;
+
+  form.style.display = "block";
+
+  // toggles the Submit button so that it now Updates an existing contact instead of posting a new one
+  submitBtnToUpdate = true;
 };
