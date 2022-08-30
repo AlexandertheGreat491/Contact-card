@@ -51,6 +51,8 @@ Sources:
 
 [idb](https://www.npmjs.com/package/idb)
 
+[jakearchibald](https://github.com/jakearchibald/idb#idbdatabase-enhancements)
+
 [Nodemon](https://www.npmjs.com/package/nodemon)
 
 [Pixel to Em Conversion](https://www.w3schools.com/tags/ref_pxtoemconversion.asp)
