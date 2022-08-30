@@ -19,6 +19,7 @@ export const initdb = async () => {
 };
 
 // exports a function that is used to GET to the database
+// export async getDb()
 export const getDb = async () => {
   console.log("GET from the database");
 
@@ -26,16 +27,38 @@ export const getDb = async () => {
   const contactDb = await openDB("contact_db", 1);
 
   // creates a new transaction & specifies the store & data privileges
-  const tx = contactDb.transaction('contacts', 'readonly');
+  const tx = contactDb.transaction("contacts", "readonly");
 
   // opens the desired object store
-  const store = tx.objectStore('contacts');
+  const store = tx.objectStore("contacts");
 
   // uses the .getAll() method to get all data in the database
   const request = store.getAll();
 
   // gets the confirmation of the request
   const result = await request;
-  console.log('result.value', result);
+  console.log("result.value", result);
   return result;
 };
+
+// export the postDb() function to POST to the database
+export const postDb = async (name, email, phone, profile) => {
+    console.log ('POST to the database');
+
+    // creates a connection to the database & specifies the version
+    const contactDb = await openDB('contact_db', 1);
+
+    // creates a new transaction & specifies the store & data privileges
+    const tx = contactDb.transaction('contacts', 'readwrite');
+
+    // opens up the desired object store
+    const store = tx.objectStore('contacts');
+
+    // uses the .add() method on the store & passes  in the content
+    // the .add() method takes in an object as a parameter that is populated by a form input
+    const request = store.add({name: name, email: email, phone: phone, profile: profile});
+
+    // gets confirmation of the request
+    const result = await request;
+    console.log('🚀 - data saved to the database', result);
+}
