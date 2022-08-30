@@ -18,6 +18,9 @@ import Dog from "../images/dog.png";
 // imports the initDb function from database.js
 import { getDb, initdb, postDb } from './database';
 
+// imports the fetchCards() function
+import {fetchCards} from './cards';
+
 window.addEventListener('load', function() {
   initdb();
 
