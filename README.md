@@ -61,6 +61,8 @@ Sources:
 
 [Scripts](https://docs.npmjs.com/cli/v8/using-npm/scripts)
 
+[The ways of Workbox](https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#using-a-bundler)
+
 [Webpack](https://webpack.js.org/guides/getting-started/#modules)
 
 [Working with objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
