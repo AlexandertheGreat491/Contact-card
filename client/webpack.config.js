@@ -1,5 +1,9 @@
-const path = require('path');
+// require statements
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+//const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
+
+const path = require('path');
 
 module.exports = {
     mode: 'development',
@@ -38,7 +42,8 @@ module.exports = {
         new HtmlWebpackPlugin({
           template: './index.html',
           title: 'Webpack Plugin',
-        })
+        }),
+        new WorkboxPlugin.GenerateSW()
       ]
       
 };
