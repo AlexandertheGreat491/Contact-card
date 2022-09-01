@@ -53,6 +53,8 @@ Sources:
 
 [jakearchibald](https://github.com/jakearchibald/idb#idbdatabase-enhancements)
 
+[Lighthouse](https://web.dev/learn/#lighthouse)
+
 [Nodemon](https://www.npmjs.com/package/nodemon)
 
 [Pixel to Em Conversion](https://www.w3schools.com/tags/ref_pxtoemconversion.asp)
