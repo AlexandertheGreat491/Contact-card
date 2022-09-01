@@ -1,6 +1,6 @@
 // require statements
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-//const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { InjectManifest } = require("workbox-webpack-plugin");
 const WorkboxPlugin = require("workbox-webpack-plugin");
 
 const path = require("path");
@@ -41,30 +41,9 @@ module.exports = {
       template: "./index.html",
       title: "Webpack Plugin",
     }),
-    new WorkboxPlugin.GenerateSW({
-      // images will not be precached
-      exclude: [/\.(?:png|jpg|jpeg|svg)$/],
-
-      // defines runtime caching rules
-      runtimeCaching: [
-        {
-          // matches any request that ends with .png, .jpg, jpeg or .svg
-          urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-
-          // applies a cache-first strategy
-          handler: "CacheFirst",
-
-          options: {
-            // uses a custom cache name
-            cacheName: "images",
-
-            // only caches 1 image
-            expiration: {
-              maxEntries: 1,
-            },
-          },
-        },
-      ],
+    new InjectManifest({
+      swSrc: "./src/sw.js",
+      swDest: "service-worker.js",
     }),
   ],
 };

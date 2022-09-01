@@ -1,12 +1,12 @@
 import { registerRoute } from "workbox-routing";
 import { StaleWhileRevalidate, CacheFirst } from "workbox-strategies";
 import { precacheAndRoute } from "workbox-precaching";
-import { CacheableResponsePlugin } from "workbox-cahceable-response";
+import { CacheableResponsePlugin } from "workbox-cacheable-response";
 
 // imports the expiration plugin
 import { ExpirationPlugin } from "workbox-expiration";
 
-precacheAndRoute(self._WB_MANIFEST);
+precacheAndRoute(self.__WB_MANIFEST);
 
 const cacheName = "static-resources";
 const matchCallback = ({ request }) => {
