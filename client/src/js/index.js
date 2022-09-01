@@ -5,7 +5,6 @@ import "./form";
 // import css files
 import "../css/index.css";
 
-
 // import Bootstrap's npm modules
 import { Tooltip, Toast, Popover } from "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -109,9 +108,28 @@ window.editCard = (e) => {
   submitBtnToUpdate = true;
 };
 
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // uses the window load event to keep the page load performant
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./service-worker.js');
-  })
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js");
+  });
 }
+
+// install button
+const installBtn = document.getElementById("installBtn");
+
+// event listener for the install button
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  installBtn.style.visibility = "visible";
+
+  installBtn.addEventListener("click", () => {
+    event.prompt();
+    installBtn.setAttribute("disabled", true);
+    installBtn.textContent = "Installed!";
+  });
+});
+
+window.addEventListener("appinstalled", (event) => {
+  console.log("👍", "appinstalled", event);
+});
